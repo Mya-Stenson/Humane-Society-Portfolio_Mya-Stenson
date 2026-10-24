@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mya Stenson's creative portfolio featuring web design, digital projects, and sustainability writing.">
+  <title>Mya Stenson | Creative Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Mya Stenson home">
+      <span class="brand-mark" aria-hidden="true">✿</span>
+      <span class="brand-copy">
+        <span class="brand-name">Mya Stenson</span>
+        <span class="brand-subtitle">Creative portfolio</span>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="menu-icon" aria-hidden="true">☰</span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#work">Selected work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Web design · Digital media · Writing</p>
+        <h1>Creative work<br>with a little<br><span>more heart.</span></h1>
+        <p class="hero-intro">I'm Mya, a designer and creative problem-solver interested in thoughtful digital experiences, clear communication, and work that supports causes that matter.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#about">A little about me</a>
+        </div>
+        <p class="hero-note">Curious by nature. Creative by practice. Passionate about animal rescue.</p>
+      </div>
+      <div class="hero-art" aria-label="Personal photo area">
+        <div class="blob blob-yellow"></div>
+        <div class="blob blob-green"></div>
+        <div class="photo-frame dogs-frame">
+          <img src="images/my-dogs.jpg" alt="Mya's dogs" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="photo-placeholder">
+            <span class="placeholder-paw" aria-hidden="true">🐾</span>
+            <strong>Your dogs go here!</strong>
+            <span>Add your photo as <code>my-dogs.jpg</code> in the images folder.</span>
+          </div>
+        </div>
+        <div class="sticker sticker-top" aria-hidden="true">made with<br>heart <span>♡</span></div>
+        <div class="sticker sticker-bottom">Design for<br>a kinder world <span aria-hidden="true">🐾</span></div>
+      </div>
+    </section>
+
+    <section class="intro-band">
+      <div class="section-wrap intro-inner">
+        <p class="eyebrow">A little creativity can go a long way</p>
+        <h2>Good ideas deserve thoughtful design.</h2>
+        <p>This portfolio brings together web projects, creative experiments, and sustainability writing. Each piece reflects my interest in making information approachable and building digital experiences with purpose.</p>
+        <div class="skill-list" aria-label="Areas of work">
+          <article class="skill-item">
+            <span class="skill-icon icon-sage" aria-hidden="true">⌘</span>
+            <h3>Web design</h3>
+            <p>Clear, welcoming, user-friendly experiences.</p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-icon icon-yellow" aria-hidden="true">✳</span>
+            <h3>Creative design</h3>
+            <p>Visual ideas with personality and intention.</p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-icon icon-coral" aria-hidden="true">✎</span>
+            <h3>Writing</h3>
+            <p>Thoughtful communication and storytelling.</p>
+          </article>
+          <article class="skill-item">
+            <span class="skill-icon icon-sage" aria-hidden="true">♡</span>
+            <h3>Purpose</h3>
+            <p>Creative work rooted in care and curiosity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section section-wrap" id="work">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A few things I've made</p>
+          <h2>Selected work<span class="accent-dot">.</span></h2>
+        </div>
+        <p>Websites, digital concepts, and creative projects. A mix of learning, experimenting, and building.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-featured">
+          <a class="project-visual visual-sustainable" href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment13/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open Sustainable Eats website">
+            <span class="visual-label">Web design · Multi-page site</span>
+            <div class="mock-window">
+              <span class="mock-dots"><i></i><i></i><i></i></span>
+              <span class="mock-title">sustainable eats</span>
+              <span class="mock-subtitle">Small choices. Lasting impact.</span>
+              <span class="mock-leaves" aria-hidden="true">✿ ❋</span>
+            </div>
+            <span class="visual-cta">Explore project ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Sustainable Eats</h3><span class="project-number">01</span></div>
+            <p>A sustainability-focused website exploring recipes, food waste, and community. Developed across several iterations as I refined the layout, styling, and interactive elements.</p>
+            <div class="tag-list"><span>HTML</span><span>CSS</span><span>Responsive design</span></div>
+            <div class="project-links">
+              <a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment13/index.html" target="_blank" rel="noopener noreferrer">Final website ↗</a>
+              <a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment10/index.html" target="_blank" rel="noopener noreferrer">Early version ↗</a>
+              <a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment11/index.html" target="_blank" rel="noopener noreferrer">Iteration 3 ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual visual-painting" href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment12/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open Mastering Oil Painting website">
+            <span class="visual-label">Web design · Educational site</span>
+            <div class="paint-art" aria-hidden="true"><span class="paint-circle"></span><span class="paint-brush">╱</span><span class="paint-swatch">✳</span></div>
+            <span class="visual-cta">Explore project ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Mastering Oil Painting</h3><span class="project-number">02</span></div>
+            <p>An educational web project built around oil painting essentials, with an emphasis on organizing information for a creative audience.</p>
+            <div class="tag-list"><span>Web design</span><span>Content layout</span></div>
+            <div class="project-links">
+              <a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment12/index.html" target="_blank" rel="noopener noreferrer">Final website ↗</a>
+              <a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment9/index.html" target="_blank" rel="noopener noreferrer">Earlier version ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual visual-garden" href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment14/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open Gardening Log website">
+            <span class="visual-label">Web design · Personal project</span>
+            <div class="garden-card" aria-hidden="true"><span class="garden-sun"></span><span class="garden-plant">♣</span><span class="garden-caption">grow at your own pace</span></div>
+            <span class="visual-cta">Explore project ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Gardening Log</h3><span class="project-number">03</span></div>
+            <p>A gardening-themed website focused on tracking and reflecting on a hands-on hobby.</p>
+            <div class="tag-list"><span>Web design</span><span>Personal organization</span></div>
+            <div class="project-links"><a href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment14/index.html" target="_blank" rel="noopener noreferrer">View website ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual visual-figma" href="https://www.figma.com/make/9D0hi46dOVbBiCHYetadUx/Sustainable-Gardening-App-Design?p=f" target="_blank" rel="noopener noreferrer" aria-label="Open Green Thumb Figma concept">
+            <span class="visual-label">UI/UX · App concept</span>
+            <div class="phone-mock" aria-hidden="true"><span class="phone-notch"></span><span class="phone-leaf">♣</span><strong>Green Thumb</strong><span class="phone-line"></span><span class="phone-line short"></span><span class="phone-plant">🌱</span></div>
+            <span class="visual-cta">Explore concept ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Green Thumb</h3><span class="project-number">04</span></div>
+            <p>A Figma app concept for sustainable gardening. Presented as a design concept rather than a finished product.</p>
+            <div class="tag-list"><span>Figma</span><span>UI/UX concept</span></div>
+            <div class="project-links"><a href="https://www.figma.com/make/9D0hi46dOVbBiCHYetadUx/Sustainable-Gardening-App-Design?p=f" target="_blank" rel="noopener noreferrer">View Figma concept ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual visual-game" href="https://mya-papaya.github.io/MART391/game.html" target="_blank" rel="noopener noreferrer" aria-label="Open Italian language game">
+            <span class="visual-label">Interactive media · Game</span>
+            <div class="game-art" aria-hidden="true"><span>ciao!</span><span>★</span><span>andiamo</span></div>
+            <span class="visual-cta">Play the game ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Italian Game</h3><span class="project-number">05</span></div>
+            <p>An interactive learning project exploring playful presentation and engagement.</p>
+            <div class="tag-list"><span>Interactive media</span><span>Game design</span></div>
+            <div class="project-links"><a href="https://mya-papaya.github.io/MART391/game.html" target="_blank" rel="noopener noreferrer">Play project ↗</a></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <a class="project-visual visual-portfolio" href="https://mya-papaya.github.io/Stenson_FINAL/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open personal portfolio website">
+            <span class="visual-label">Personal site · Creative direction</span>
+            <div class="portfolio-art" aria-hidden="true"><span class="portfolio-sun"></span><span class="portfolio-type">made<br>by hand.</span><span class="portfolio-flower">✿</span></div>
+            <span class="visual-cta">Explore website ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-title-row"><h3>Personal Portfolio</h3><span class="project-number">06</span></div>
+            <p>A personal web portfolio that offers another look at my visual style and how I present creative work.</p>
+            <div class="tag-list"><span>Portfolio design</span><span>Visual identity</span></div>
+            <div class="project-links"><a href="https://mya-papaya.github.io/Stenson_FINAL/index.html" target="_blank" rel="noopener noreferrer">View website ↗</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="writing-section" id="writing">
+      <div class="section-wrap writing-inner">
+        <div class="writing-copy">
+          <p class="eyebrow">Words with purpose</p>
+          <h2>Writing &amp; reflection<span class="accent-dot">.</span></h2>
+          <p>I’m interested in how writing and design can make complex ideas easier to understand and invite people into a conversation. My sustainability writing explores both the purpose behind a project and the decisions that shape it.</p>
+          <a class="button button-light" href="https://mya-papaya.github.io/MART341-WebDesign/WebDesignHomework/Assignment13/index.html" target="_blank" rel="noopener noreferrer">Read the project in context ↗</a>
+        </div>
+        <article class="writing-card">
+          <span class="writing-icon" aria-hidden="true">✎</span>
+          <p class="card-kicker">Writing sample · Web design reflection</p>
+          <h3>Sustainable Eats: A Reflective Analysis of Web Design, Interaction, and Sustainability</h3>
+          <p>A reflection on the development of Sustainable Eats, including layout, responsive design, accessibility, visual consistency, and ideas for future improvements.</p>
+          <p class="writing-note">The accompanying PDF can be added to the <code>documents</code> folder when you're ready to publish it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-photo">
+        <img src="images/my-dogs.jpg" alt="Mya's dogs relaxing together" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder about-placeholder"><span class="placeholder-paw" aria-hidden="true">🐾</span><strong>Dog people welcome</strong><span>Add your dogs' photo as images/my-dogs.jpg.</span></div>
+        <span class="photo-caption">My favorite kind of company</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">A little about me</p>
+        <h2>Creative, curious, and here for the good stuff.</h2>
+        <p>I’m Mya Stenson, a Media Arts graduate with an interest in web design, digital creativity, and thoughtful communication. I enjoy making information inviting and building projects that bring ideas to life.</p>
+        <p>Outside of design, animal rescue is close to my heart. I’d love to put my creative skills toward work that helps an organization connect with its community, tell meaningful stories, and support animals in need.</p>
+        <a class="text-link" href="mailto:">Get in touch ↗ <span class="small-note">(add your email in index.html)</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-paw" aria-hidden="true">🐾</div>
+    <p>Thoughtful design. Kind intentions. A little more good in the world.</p>
+    <span>© <span id="year"></span> Mya Stenson</span>
+  </footer>
+</body>
+</html>
