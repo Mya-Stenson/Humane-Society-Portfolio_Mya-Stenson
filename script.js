@@ -1,38 +1,57 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const siteNav = document.querySelector('.site-nav');
+(() => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('#site-nav');
 
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener('click', () => {
-    const isOpen = siteNav.classList.toggle('is-open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-  });
-
-  siteNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      siteNav.classList.remove('is-open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Open navigation');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.innerHTML = isOpen ? 'Close <span aria-hidden="true">−</span>' : 'Menu <span aria-hidden="true">＋</span>';
     });
-  });
-}
 
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-if ('IntersectionObserver' in window && sections.length && navLinks.length) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          const active = link.getAttribute('href') === `#${entry.target.id}`;
-          link.classList.toggle('active', active);
-          if (active) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      }
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = 'Menu <span aria-hidden="true">＋</span>';
+      });
     });
-  }, { rootMargin: '-35% 0px -55% 0px' });
+  }
 
-  sections.forEach((section) => observer.observe(section));
-}
+  const year = document.querySelector('#year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Show the personal photo when the file exists, otherwise retain the friendly prompt.
+  const photo = document.querySelector('#dogs-photo');
+  const placeholder = document.querySelector('#dogs-placeholder');
+  if (photo && placeholder) {
+    photo.addEventListener('load', () => {
+      photo.hidden = false;
+      placeholder.hidden = true;
+    });
+    photo.addEventListener('error', () => {
+      photo.hidden = true;
+      placeholder.hidden = false;
+    });
+    if (photo.complete && photo.naturalWidth > 0) {
+      photo.hidden = false;
+      placeholder.hidden = true;
+    }
+  }
+
+  // Subtle reveal on scroll; content remains visible when reduced motion is preferred.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealItems = document.querySelectorAll('.project-card, .featured-project, .portfolio-note, .writing-copy, .about-content');
+  if ('IntersectionObserver' in window && !reducedMotion) {
+    revealItems.forEach(item => item.classList.add('reveal'));
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealItems.forEach(item => observer.observe(item));
+  }
+})();
