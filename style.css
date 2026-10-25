@@ -486,6 +486,9 @@ button:focus-visible {
   height:auto;
   background:var(--sage);
 }
+.photo-frame img:first-child {
+  grid-column:1 / -1;
+}
 .photo-caption {
   display:block;
   text-align:center;
