@@ -44,7 +44,7 @@ button:focus-visible {
 .page-shell {
   max-width:1600px;
   margin:auto;
-  overflow:hidden;
+  overflow-x:clip;
 }
 .skip-link {
   position:absolute;
@@ -65,12 +65,14 @@ button:focus-visible {
   align-items:center;
   justify-content:space-between;
   border-bottom:1px solid var(--line);
-  position:relative;
+  background:var(--paper);
+  position:sticky;
+  top:0;
   z-index:10;
 }
 .wordmark {
   font-family:var(--serif);
-  font-size:32px;
+  font-size:28px;
   font-weight:700;
   letter-spacing:-2px;
   line-height:1;
