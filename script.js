@@ -21,23 +21,12 @@
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
 
-  // Show the personal photo when the file exists, otherwise retain the friendly prompt.
-  const photo = document.querySelector('#dogs-photo');
-  const placeholder = document.querySelector('#dogs-placeholder');
-  if (photo && placeholder) {
-    photo.addEventListener('load', () => {
-      photo.hidden = false;
-      placeholder.hidden = true;
-    });
-    photo.addEventListener('error', () => {
-      photo.hidden = true;
-      placeholder.hidden = false;
-    });
-    if (photo.complete && photo.naturalWidth > 0) {
-      photo.hidden = false;
-      placeholder.hidden = true;
-    }
-  }
+  // If a photo file is missing or fails to load, hide it quietly instead of showing a broken-image icon.
+  document.querySelectorAll('.photo-frame img').forEach(img => {
+    const hide = () => { img.style.display = 'none'; };
+    img.addEventListener('error', hide);
+    if (img.complete && img.naturalWidth === 0) hide();
+  });
 
   // Subtle reveal on scroll; content remains visible when reduced motion is preferred.
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
